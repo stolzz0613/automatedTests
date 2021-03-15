@@ -4,6 +4,8 @@ import { ReactSelector } from 'testcafe-react-selectors';
 class CustomerService{
 
     constructor(){
+        this.canonical_link = Selector('link').withAttribute('rel', 'canonical');
+
         this.name_input = Selector('input#name');
         this.lastName_input = Selector('input#lastName');
         this.email_input = Selector('input#email');
@@ -22,6 +24,10 @@ class CustomerService{
         this.email_danger = Selector('span').withAttribute('color', 'danger').withText('Ingresa tu correo electrónico');
         this.body_danger = Selector('span').withAttribute('color', 'danger').withText('Por favor completa este campo, para BVC es importante conocer tu solicitud a detalle, así podremos brintarte el soporte adecuado.');
         this.terms_danger = Selector('span').withAttribute('color', 'danger').withText('Debes aceptar la política de tratamientos de datos para continuar');
+        this.breadCrumb_customerService = Selector('li').child('p').withText('Servicio al cliente');
+        this.breadCrumb_home = Selector('li').child('p').withText('Inicio');
+
+        this.text = Selector('p').child('p').withText('Para cualquier inquietud o información adicional relacionada con el tratamiento de datos personales, puede contactarse al correo electrónico datospersonales@bvc.com.co o al teléfono 3139000');
     }
  
     async fillInputs(name, lastName, email, body){
@@ -39,17 +45,7 @@ class CustomerService{
             .wait(1000);
     }
 
-    async hoverTerms(){
-        await t
-            .click(this.modal)
-            .pressKey('end')
-            .wait(2000)
-        await t
-            .click(this.modal)
-            .pressKey('end')
-            .pressKey('end')
-            .pressKey('end')
-            .wait(2000)
+    async acceptTerms(){
         await t
             .click(this.confirmModal_button);
     }
@@ -65,5 +61,18 @@ class CustomerService{
             .click(this.send_button)
             .wait(8000);
     }
+
+    async clickOnBreadCrumb_customerService(){
+        await t
+            .click(this.breadCrumb_customerService)
+            .wait(3000);
+    }
+
+    async clickOnBreadCrumb_home(){
+        await t
+            .click(this.breadCrumb_home)
+            .wait(3000);
+    }
 }
+
 export default new CustomerService();

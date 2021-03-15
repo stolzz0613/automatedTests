@@ -4,6 +4,7 @@ class CustomerService{
 
     constructor(){
         this.contact_button = Selector('span').withText('Contacto');
+        this.h1 = Selector('h1').withText('Servicio al cliente');
     }
  
     async clickOnContact_button(){
