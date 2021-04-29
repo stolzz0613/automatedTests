@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "testcafe": "^1.12.0",
-    "testcafe-react-selectors": "^4.1.4"
+    "testcafe-react-selectors": "^4.1.4",
+    "testcafe-reporter-html": "git+https://github.com/picuscreative/testcafe-reporter-html.git",
+    "testcafe-reporter-json": "^2.2.0"
   }
 }

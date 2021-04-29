@@ -96,7 +96,6 @@ test
             .expect(await getPageHref()).eql('https://plataformatest.bvc.com.co/', 'The page is valid');
     })
     ('Validate breadCrumb level 1', async t => {
-        //Access to contact form
         await HomePage.clickOnCustomerService_button();
         await t.expect(await getPageHref()).eql('https://plataformatest.bvc.com.co/servicio-al-cliente', 'The page is valid');
 
@@ -115,7 +114,6 @@ test
             .expect(await getPageHref()).eql('https://plataformatest.bvc.com.co/', 'The page is valid');
     })
     ('Validate breadCrumb level 2', async t => {
-        //Access to contact form
         await HomePage.clickOnCustomerService_button();
         await t.expect(await getPageHref()).eql('https://plataformatest.bvc.com.co/servicio-al-cliente', 'The page is valid');
 

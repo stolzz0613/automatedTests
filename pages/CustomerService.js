@@ -3,8 +3,7 @@ import {Selector, t} from 'testcafe';
 class CustomerService{
 
     constructor(){
-        this.contact_button = Selector('span').withText('Contacto');
-        this.h1 = Selector('h1').withText('Servicio al cliente');
+        this.contact_button = Selector('span').withText('Ir a contáctanos');
     }
  
     async clickOnContact_button(){
