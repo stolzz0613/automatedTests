@@ -1,0 +1,44 @@
+Using locally installed version of TestCafe.
+ Running tests in:
+ - Chrome 90.0.4430.93 / macOS 10.14.6
+
+ Indices Tab
+ ✓ Check Indices Tab
+ ✖ Check Indices Subtabs
+
+   1) The element that matches the specified selector is not visible.
+
+      Browser: Chrome 90.0.4430.93 / macOS 10.14.6
+
+         23 |        await t.expect(Widget.indices_tab.exists).ok();
+         24 |        await Widget.clickOnIndices_tab();
+         25 |        await Widget.hoverMasInformacion_button();
+         26 |
+         27 |        await
+      t.expect(Indices_tab.accionarios_subTab.exists).ok();
+       > 28 |        await t.takeElementScreenshot(ReactSelector('me'));
+         29 |        await
+      t.expect(Indices_tab.rentaFija_subTab.exists).ok();
+         30 |        await
+      t.expect(Indices_tab.mercadoMonetario_subTab.exists).ok();
+         31 |    })
+         32 |    .after( async t => {});
+         33 |
+
+         at <anonymous>
+
+   (/Users/renediaz/automatedTests/tests/MercadoLocalNivel1/Indices/Indices.js:28:17)
+         at asyncGeneratorStep
+
+   (/Users/renediaz/automatedTests/tests/MercadoLocalNivel1/Indices/Indices.js:4:260)
+         at _next
+      (/Users/renediaz/automatedTests/tests/MercadoLocalNivel1/Indices/Indices.js:4:598)
+
+
+ ✓ Check Accionarios headers
+ ✓ Check Renta Fija headers
+ ✓ Check Mercado monetario headers
+
+
+ 1/5 failed (2m 13s)
+Stopping TestCafe...

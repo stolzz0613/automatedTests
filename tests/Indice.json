@@ -1,0 +1,63 @@
+Using locally installed version of TestCafe.
+{
+  "startTime": "2021-04-29T15:38:25.363Z",
+  "endTime": "2021-04-29T15:40:39.020Z",
+  "userAgents": [
+    "Chrome 90.0.4430.93 / macOS 10.14.6"
+  ],
+  "passed": 4,
+  "total": 5,
+  "skipped": 0,
+  "fixtures": [
+    {
+      "name": "Indices Tab",
+      "path": "/Users/renediaz/automatedTests/tests/MercadoLocalNivel1/Indices/Indices.js",
+      "meta": {},
+      "tests": [
+        {
+          "name": "Check Indices Tab",
+          "meta": {},
+          "errs": [],
+          "durationMs": 15564,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "Check Indices Subtabs",
+          "meta": {},
+          "errs": [
+            "The element that matches the specified selector is not visible.\n\nBrowser: Chrome 90.0.4430.93 / macOS 10.14.6\n\n   23 |        await t.expect(Widget.indices_tab.exists).ok();\n   24 |        await Widget.clickOnIndices_tab();\n   25 |        await Widget.hoverMasInformacion_button();\n   26 |\n   27 |        await t.expect(Indices_tab.accionarios_subTab.exists).ok();\n > 28 |        await t.takeElementScreenshot(ReactSelector('me'));\n   29 |        await t.expect(Indices_tab.rentaFija_subTab.exists).ok();\n   30 |        await t.expect(Indices_tab.mercadoMonetario_subTab.exists).ok();\n   31 |    })\n   32 |    .after( async t => {});\n   33 |\n\n   at <anonymous> (/Users/renediaz/automatedTests/tests/MercadoLocalNivel1/Indices/Indices.js:28:17)\n   at asyncGeneratorStep (/Users/renediaz/automatedTests/tests/MercadoLocalNivel1/Indices/Indices.js:4:260)\n   at _next (/Users/renediaz/automatedTests/tests/MercadoLocalNivel1/Indices/Indices.js:4:598)"
+          ],
+          "durationMs": 27483,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "Check Accionarios headers",
+          "meta": {},
+          "errs": [],
+          "durationMs": 33720,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "Check Renta Fija headers",
+          "meta": {},
+          "errs": [],
+          "durationMs": 28803,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "Check Mercado monetario headers",
+          "meta": {},
+          "errs": [],
+          "durationMs": 27864,
+          "screenshotPath": null,
+          "skipped": false
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}
