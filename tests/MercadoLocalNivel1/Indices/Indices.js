@@ -25,7 +25,7 @@ test
         await Widget.hoverMasInformacion_button();
 
         await t.expect(Indices_tab.accionarios_subTab.exists).ok();
-        await t.takeElementScreenshot(ReactSelector('me'));
+        await t.takeElementScreenshot(Selector('body'));
         await t.expect(Indices_tab.rentaFija_subTab.exists).ok();
         await t.expect(Indices_tab.mercadoMonetario_subTab.exists).ok();
     })
