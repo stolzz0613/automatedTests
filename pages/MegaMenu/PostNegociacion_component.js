@@ -11,29 +11,36 @@ class PostNegociacion_component{
         this.documentos_option = Selector('p').withText('Documentos');
     }
 
+    async hoverOnMercados_section(){
+        await t
+        .wait(2000)
+        .hover(this.mercados_section)
+        .wait(2000);
+    }
+
     async clickOnServiciosaEmisores_option(){
         await t
-            .wait(5000)
+            .wait(2000)
             .click(this.serviciosaEmisores_option)
-            .wait(5000);
+            .wait(2000);
     }
     async clickOnServiciosaDepositantes_option(){
         await t
-            .wait(5000)
-            .click(this.serviciosaDepositantes_option_option)
-            .wait(5000);
+            .wait(2000)
+            .click(this.serviciosaDepositantes_option)
+            .wait(2000);
     }
     async clickOnServiciosaInversionistas_option(){
         await t
-            .wait(5000)
+            .wait(2000)
             .click(this.serviciosaInversionistas_option)
-            .wait(5000);
+            .wait(2000);
     }
     async clickOnDocumentos_option(){
         await t
-            .wait(5000)
+            .wait(2000)
             .click(this.documentos_option)
-            .wait(5000);
+            .wait(2000);
     }
    
 }
